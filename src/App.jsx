@@ -1,34 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import Home from './Components/Home';
+import About from './Components/About';
+import NewPost from './Components/NewPost';
+import PostPage from './Components/PostPage';
+import Missing from './Components/Missing';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      title: "Why Learn React",
+      datetime: "October 05, 2022 20:56:45 PM",
+      body: "This is the day that the Lord has made. We will rejoice as the days go by."
+    },
+    {
+      id: 2,
+      title: "React best Practices",
+      datetime: "October 05, 2022 20:56:45 PM",
+      body: "This is the day that the Lord has made. We will rejoice as the days go by."
+    },
+    {
+      id: 3,
+      title: "Acing your first React Interview",
+      datetime: "October 05, 2022 20:56:45 PM",
+      body: "This is the day that the Lord has made. We will rejoice as the days go by."
+    },
+    {
+      id: 4,
+      title: "Developer Roadmap",
+      datetime: "October 05, 2022 20:56:45 PM",
+      body: "This is the day that the Lord has made. We will rejoice as the days go by."
+    }
+  ])
+  const [search, setSearch] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="App container">
+      <Header 
+        search={search}
+        setSearch={setSearch}
+      />
+      <Routes>
+        <Route path='/' element={<Home posts={posts} />}/>
+        <Route path='/post' element={<NewPost />}/>
+        <Route path='/post/:id' element={<PostPage />}/>
+        <Route path='/about' element={<About />}/>
+        <Route path='*' element={<Missing />}/>
+      </Routes>
+      <Footer />
     </div>
   )
 }
 
-export default App
+export default App;
