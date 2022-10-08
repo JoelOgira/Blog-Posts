@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 const Header = ({ search, setSearch }) => {
   return (
-    <header className="navbar navbar-expand-md navbar-responsive bg-transparent py-4">
+    <header className="Header navbar navbar-expand-md navbar-responsive bg-transparent py-4">
       <div className="container">
         <div className="navbar-brand">
             <Link to="/" className='py-2'><strong>Windfall <span style={{color: 'black'}}>Blogs</span></strong></Link>
@@ -19,6 +20,7 @@ const Header = ({ search, setSearch }) => {
             </li>
         </ul>
         <form className="searchForm" onSubmit={e => e.preventDefault()}>
+          <div className="input-group">
           <label htmlFor="Search">Search posts</label>
           <input 
             type="text"
@@ -27,6 +29,8 @@ const Header = ({ search, setSearch }) => {
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
+          <button className="btn btn-outline-secondary" style={{color: 'teal', border: 'none'}}><FaSearch /></button>
+          </div>
         </form>
       </div>
     </header>

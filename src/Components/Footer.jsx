@@ -6,9 +6,9 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {  
   const today = new Date();
   return (
-    <footer className="sticky-footer container">      
+    <footer className="Footer sticky-footer container">      
       <hr style={{color: 'green', width: '100%', height: '1px'}} />
-      <div className="row">
+      {/* <div className="row">
         <div className="col quick-links">
           <ul className="navbar-nav">
             <h4>Quick Links</h4>
@@ -51,7 +51,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <p className="text-center pb-4" style={{color: 'teal', marginTop: '1em'}}>
         Windfall Blogs &copy; {today.getFullYear()}
       </p>
