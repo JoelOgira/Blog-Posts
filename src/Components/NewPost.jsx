@@ -2,7 +2,7 @@ const NewPost = ({
   postTitle, setPostTitle, postBody, setPostBody, handleSubmit
 }) => {
   return (
-    <main className="container">
+    <main className="NewPost container">
         <h1>New Post</h1>
         <form className="newFormPost p-4 form-control" onSubmit={handleSubmit}>
           <label htmlFor="postTitle" className="text-teal">Title </label>
@@ -13,7 +13,7 @@ const NewPost = ({
             required
             value={postTitle}
             onChange={e => setPostTitle(e.target.value)}
-          />
+          />        
           <label htmlFor="postBody" className="text-teal">Post </label>
           <textarea 
             id="postBody"

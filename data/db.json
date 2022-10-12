@@ -1,29 +1,40 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "Why Learn React",
-            "datetime": "October 05, 2022 20:56:45 PM",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
-          },
-          {
-            "id": 2,
-            "title": "React best Practices",
-            "datetime": "October 05, 2022 20:56:45 PM",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
-          },
-          {
-            "id": 3,
-            "title": "Acing your first React Interview",
-            "datetime": "October 05, 2022 20:56:45 PM",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
-          },
-          {
-            "id": 4,
-            "title": "Developer Roadmap",
-            "datetime": "October 05, 2022 20:56:45 PM",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
-          }
-    ]
+  "posts": [
+    {
+      "id": 3,
+      "title": "Acing your first React Interview",
+      "datetime": "October 05, 2022 20:56:45 PM",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
+    },
+    {
+      "id": 4,
+      "title": "Developer Roadmap",
+      "datetime": "October 05, 2022 20:56:45 PM",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia minima laboriosam natus voluptatibus, magni rerum suscipit earum quis quaerat fugiat consequatur exercitationem, sunt fugit, labore est numquam atque. Velit exercitationem debitis nesciunt omnis odit nemo dolore voluptatum optio unde?. This is the day that the Lord has made. We will rejoice as the days go by."
+    },
+    {
+      "id": 5,
+      "title": "Introduction to AI",
+      "datetime": "October 08, 2022 6:18:37 PM",
+      "body": "The design choices react team have made in useEffect hook are still a heated debate. Some people like it and some don’t.\n\nIf you don't come from the React world it’ll definitely sound strange because its default behaviour is the dreaded “Infinite Render Loop” which is pretty easy to run into. For example\n\nuseEffect(()=>{console.log(\"Hello World\")})\nLooks fine right?\nNope, this will print “Hello World” in every render and the React dev OCD in me can't wait to put a second dependency array like this"
+    },
+    {
+      "id": 6,
+      "title": "Viscous Authority",
+      "datetime": "October 11, 2022 12:38:34 PM",
+      "body": "As I come up with post about viscous authority. It is within my deepest grandeurs that such mannerisms be abquinted to say the least. The day was filled with such frivolous entanglements that brought so much joy to the fellow revellers. The day thus as we say all in ternary without shennanighans."
+    },
+    {
+      "id": 7,
+      "title": "In Conclusion",
+      "datetime": "October 11, 2022 1:04:12 PM",
+      "body": "N/B: It is to be noted that farmers should properly market the goats and the goat products to potential clients. This will help put out the word outside there and you will always be given priority whenever such need arises. Extensive marketing will ensure the farmer will always have the necessary market, thus they will be able to make profits from this venture. All in all, goat farming is a profitable venture that if undertaken properly will bring the farmer immense profits."
+    },
+    {
+      "id": 8,
+      "title": "You are ",
+      "datetime": "October 12, 2022 11:19:31 AM",
+      "body": "Way maker miracle worker light in the darkness my God that is who you are."
+    }
+  ]
 }
-    

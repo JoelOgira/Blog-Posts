@@ -37,7 +37,7 @@ a:hover {
 }
 
 /* Content styling */
-.Home, .NewPost, .PostPage, .About, .Missing {
+.Home, .NewPost, .PostPage, .About, .Missing, .EditPost {
     width: 100%;
     flex-grow: 1;
     overflow-y: auto;
