@@ -23,7 +23,7 @@ const EditPost = ({
                     <form className="newFormPost p-4 form-control" onSubmit={e => e.preventDefault()}>
                     <label htmlFor="editTitle" className="text-teal">Title </label>
                     <input 
-                        id="editTitle"
+                        id="postTitle"
                         type="text" 
                         className="form-control mb-4"
                         required
@@ -32,13 +32,13 @@ const EditPost = ({
                     />        
                     <label htmlFor="editBody" className="text-teal">Post </label>
                     <textarea 
-                        id="editBody"
+                        id="postBody"
                         className="form-control mb-4" 
                         required
                         value={editBody}
                         onChange={e => setEditBody(e.target.value)}
                     />
-                    <button onClick={() => handleEdit(post.id)} style={{width: '100%'}} className="btn btn-outline-success text-teal">Edit Post</button>
+                    <button type="submit" onClick={() => handleEdit(post.id)} style={{width: '100%'}} className="btn btn-outline-success text-teal">Edit Post</button>
                     </form>                                                                                                 
                 </>
             }
