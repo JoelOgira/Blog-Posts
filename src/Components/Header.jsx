@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 const Header = ({ search, setSearch }) => {
   return (
-    <header className="Header navbar navbar-expand-md navbar-responsive bg-transparent py-4">
+    <header className="Header navbar navbar-expand-sm navbar-responsive bg-transparent py-4">
       <div className="container">
         <div className="navbar-brand">
             <Link to="/" className='py-2'><strong>Windfall <span style={{color: 'black'}}>Blogs</span></strong></Link>
