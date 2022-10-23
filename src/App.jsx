@@ -44,7 +44,7 @@ const App = () => {
       }
     }
     fetchPosts();
-  })
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
