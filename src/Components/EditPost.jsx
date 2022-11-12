@@ -23,7 +23,7 @@ const EditPost = ({
                     <form className="newFormPost p-4 form-control" onSubmit={e => e.preventDefault()}>
                     <label htmlFor="editTitle" className="text-teal">Title </label>
                     <input 
-                        id="postTitle"
+                        id="editTitle"
                         type="text" 
                         className="form-control mb-4"
                         required
@@ -32,7 +32,8 @@ const EditPost = ({
                     />        
                     <label htmlFor="editBody" className="text-teal">Post </label>
                     <textarea 
-                        id="postBody"
+                        id="editBody"
+                        rows="16"
                         className="form-control mb-4" 
                         required
                         value={editBody}

@@ -11,6 +11,7 @@ import NewPost from './Components/NewPost';
 import PostPage from './Components/PostPage';
 import Missing from './Components/Missing';
 import EditPost from './Components/EditPost';
+import useWindowSize from './hooks/useWindowSize';
 
 const App = () => {
   const [posts, setPosts] = useState([])

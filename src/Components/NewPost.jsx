@@ -17,6 +17,7 @@ const NewPost = ({
           <label htmlFor="postBody" className="text-teal">Post </label>
           <textarea 
             id="postBody"
+            rows="16"
             className="form-control mb-4" 
             required
             value={postBody}

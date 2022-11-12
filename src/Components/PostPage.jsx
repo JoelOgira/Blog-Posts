@@ -11,7 +11,7 @@ const PostPage = ({posts, handleDelete}) => {
               <h2 className="card-title">{post.title}</h2>
               <p className="card-text" style={{fontSize: '13px'}}>{post.datetime}</p>
               <hr />
-              <p className="card-text">{post.body}</p>    
+              <article className="card-text">{post.body}</article>    
               <Link to={`/edit/${post.id}`}><button className="btn btn-outline-success my-3" style={{width: '100%'}}>Edit Post</button></Link>         
               <button className="btn btn-outline-danger my-3" onClick={() => handleDelete(post.id)}>Delete Post</button>              
             </>
