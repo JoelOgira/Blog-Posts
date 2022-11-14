@@ -22,6 +22,7 @@ const App = () => {
   const [editTitle, setEditTitle] = useState(''); 
   const [editBody, setEditBody] = useState(''); 
   const history = useNavigate();
+  const { width } = useWindowSize;
 
   useEffect(() => {
     const filteredResults = posts.filter(post => ((post.title).toLowerCase().includes(search.toLowerCase())) 
@@ -94,6 +95,7 @@ const App = () => {
       <Header 
         search={search}
         setSearch={setSearch}
+        width={width}
       />
       <Routes>
         <Route path='/' element={<Home posts={searchResults} />}/>
