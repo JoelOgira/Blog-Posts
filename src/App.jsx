@@ -12,6 +12,7 @@ import PostPage from './Components/PostPage';
 import Missing from './Components/Missing';
 import EditPost from './Components/EditPost';
 import useWindowSize from './hooks/useWindowSize';
+import useAxiosFetch from './hooks/useAxiosFetch';
 
 const App = () => {
   const [posts, setPosts] = useState([])
@@ -22,7 +23,12 @@ const App = () => {
   const [editTitle, setEditTitle] = useState(''); 
   const [editBody, setEditBody] = useState(''); 
   const history = useNavigate();
-  const { width } = useWindowSize;
+  const { width } = useWindowSize();
+  const { data, isLoading, fetchError } = useAxiosFetch(`http://localhost:3500/posts`);
+
+  useEffect(() => {
+    setPosts(data);
+  }, [data]);
 
   useEffect(() => {
     const filteredResults = posts.filter(post => ((post.title).toLowerCase().includes(search.toLowerCase())) 
@@ -30,23 +36,6 @@ const App = () => {
     setSearchResults(filteredResults.reverse());
   }, [posts, search])
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await api.get('/posts');
-        setPosts(response.data);
-      } catch (error) {
-        if (error.response) {
-          console.log(error.response.data);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        } else {
-          console.log(error.message);
-        }
-      }
-    }
-    fetchPosts();
-  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -98,7 +87,7 @@ const App = () => {
         width={width}
       />
       <Routes>
-        <Route path='/' element={<Home posts={searchResults} />}/>
+        <Route path='/' element={<Home posts={searchResults} isLoading={isLoading} fetchError={fetchError}/>}/>
         <Route path='/post' element={<NewPost handleSubmit={handleSubmit} postTitle={postTitle} setPostTitle={setPostTitle} postBody={postBody} setPostBody={setPostBody} />}/>
         <Route path='/edit/:id' element={<EditPost posts={posts} handleEdit={handleEdit} editTitle={editTitle} setEditTitle={setEditTitle} editBody={editBody} setEditBody={setEditBody}/>}/>
         <Route path='/post/:id' element={<PostPage posts={posts} handleDelete={handleDelete} />}/>
